@@ -21,3 +21,23 @@ Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_do
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/binn](https://hexdocs.pm/binn).
 
+
+## Encoding
+
+```elixir
+obj = %{hello: "world", number: 123};
+data = Binn.encode(obj);
+```
+
+## elixir
+
+```javascript
+var obj = Binn.decode(data);
+```
+
+Undefined
+---------
+
+The `undefined` value is enconded using the byte 0x03.
+
+It is an extended type derived from the storage type NOBYTES.
