@@ -25,14 +25,15 @@ be found at [https://hexdocs.pm/binn](https://hexdocs.pm/binn).
 ## Encoding
 
 ```elixir
-obj = %{hello: "world", number: 123};
-data = Binn.encode(obj);
+iex(1)> %{hello: "world", number: 123} |> Binn.encode
+<<226, 22, 2, 2, 105, 100, 32, 12, 5, 104, 101, 108, 108, 111, 160, 5, 119, 111, 114, 108, 100, 0>>
 ```
 
 ## elixir
 
-```javascript
-var obj = Binn.decode(data);
+```elixir
+iex(3)> data |> Binn.decode
+%{hello: "world", number: 123}
 ```
 
 Undefined
