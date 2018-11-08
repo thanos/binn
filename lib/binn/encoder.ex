@@ -38,7 +38,7 @@ defmodule Binn.EncodeError do
         then encoded as strings)
       * bitstrings can only be encoded as long as they're binaries (and not actual
         bitstrings - i.e., the number of bits must be a multiple of 8)
-      * binaries (or `Binn.Bin` structs) containing `2^32` or more bytes cannot
+      * binaries (or `Binn.Binary` structs) containing `2^32` or more bytes cannot
         be encoded
       * maps with more than `(2^32) - 1` elements cannot be encoded
       * lists with more than `(2^32) - 1` elements cannot be encoded
@@ -192,7 +192,7 @@ defmodule Binn.EncodeError do
     end
   end
   
-  defimpl Binn.Encoder, for: Msgpax.Bin do
+  defimpl Binn.Encoder, for: Binn.Binary do
     def encode(%{data: data}) when is_binary(data),
       do: [format(data) | data]
   

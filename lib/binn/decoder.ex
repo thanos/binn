@@ -162,7 +162,7 @@ defmodule Binn.DecodeError do
     end
   
     defp decode_binary(content, %{binary: true}) do
-      Binn.Bin.new(content)
+      Binn.Binary.new(content)
     end
   
     defp decode_binary(content, _options) do
