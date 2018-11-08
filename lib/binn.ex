@@ -43,11 +43,11 @@ defmodule Binn do
   ## Examples
       iex> {:ok, encoded} = Binn.encode("foo")
       iex> IO.iodata_to_binary(encoded)
-      <<160, 3, 102, 111, 111, 0>>
+      <<163, 102, 111, 111>>
       iex> Binn.encode(20000000000000000000)
-      {:error, %Binn.EncodeError{reason: {:too_big, 0x1158e460913d00000}}}
+      {:error, %Binn.EncodeError{reason: {:too_big, 20000000000000000000}}}
       iex> Binn.encode("foo", iodata: false)
-      {:ok, <<160, 3, 102, 111, 111, 0>>}
+      {:ok, <<163, 102, 111, 111>>}
   """
   @spec encode(term, Keyword.t) :: {:ok, iodata} | {:error, Binn.EncodeError.t}
   def encode(term, options \\ []) when is_list(options) do
@@ -75,11 +75,11 @@ defmodule Binn do
   This function accepts the same options as `encode/2`.
   ## Examples
       iex> "foo" |> Binn.encode!() |> IO.iodata_to_binary()
-      <<160, 3, 102, 111, 111, 0>>
+      <<163, 102, 111, 111>>
       iex> Binn.encode!(20000000000000000000)
       ** (Binn.EncodeError) value is too big: 20000000000000000000
       iex> Binn.encode!("foo", iodata: false)
-      <<160, 3, 102, 111, 111, 0>>
+      <<163, 102, 111, 111>>
   """
   @spec encode!(term, Keyword.t) :: iodata | no_return
   def encode!(term, options \\ []) do
@@ -160,10 +160,10 @@ defmodule Binn do
       {:ok, "foo"}
       iex> Binn.decode(<<163, "foo", "junk">>)
       {:error, %Binn.DecodeError{reason: {:excess_bytes, "junk"}}}
-      iex> encoded = Binn.encode!(Binn.Bin.new(<<3, 18, 122, 27, 115>>))
+      iex> encoded = Binn.encode!(Binn.Binary.new(<<3, 18, 122, 27, 115>>))
       iex> {:ok, bin} = Binn.decode(encoded, binary: true)
       iex> bin
-      #Binn.Bin<<<3, 18, 122, 27, 115>>>
+      #Binn.Binary<<<3, 18, 122, 27, 115>>>
   """
   @spec decode(iodata, Keyword.t) :: {:ok, any} | {:error, Binn.DecodeError.t}
   def decode(iodata, options \\ []) do
@@ -187,9 +187,9 @@ defmodule Binn do
       "foo"
       iex> Binn.decode!(<<163, "foo", "junk">>)
       ** (Binn.DecodeError) found excess bytes: "junk"
-      iex> packed = Binn.pack!(Binn.Bin.new(<<3, 18, 122, 27, 115>>))
-      iex> Binn.decode!(packed, binary: true)
-      #Binn.Bin<<<3, 18, 122, 27, 115>>>
+      iex> encoded = Binn.encode!(Binn.Binary.new(<<3, 18, 122, 27, 115>>))
+      iex> Binn.decode!(encoded, binary: true)
+      #Binn.Binary<<<3, 18, 122, 27, 115>>>
   """
   @spec decode!(iodata, Keyword.t) :: any | no_return
   def decode!(iodata, options \\ []) do
