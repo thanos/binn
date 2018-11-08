@@ -79,7 +79,7 @@ defmodule Binn do
       iex> Binn.encode!(20000000000000000000)
       ** (Binn.EncodeError) value is too big: 20000000000000000000
       iex> Binn.encode!("foo", iodata: false)
-       <<160, 3, 102, 111, 111, 0>>
+      <<160, 3, 102, 111, 111, 0>>
   """
   @spec encode!(term, Keyword.t) :: iodata | no_return
   def encode!(term, options \\ []) do

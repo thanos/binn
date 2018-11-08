@@ -1,4 +1,4 @@
-defmodule Binn.DecoderError do
+defmodule Binn.DecodeError do
     @moduledoc """
     Raised when there's an error in de-serializing some data into an Elixir term.
     """
