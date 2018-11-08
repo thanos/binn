@@ -172,7 +172,7 @@ defmodule Binn.DecodeError do
     defp decode_ext(type, content, options) do
       if type < 128 do
         type
-        |> Binn.Ext.new(content)
+        |> Binn.UserType.new(content)
         |> decode_ext(options)
       else
         type
