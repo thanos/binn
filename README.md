@@ -10,8 +10,8 @@ Elixir Types | Binn
 1          # integer | integer
 1.0        # float  | floating point numbers (IEEE single and double precision)
 true       # boolean | boolean (true and false)
-:atom      # atom / symbol | floating point numbers (IEEE single and double precision)
-"elixir"   # string | floating point numbers (IEEE single and double precision)
+:atom      # atom / symbol | string
+"elixir"   # string | string
 [1, 2, 3]  # list | list
 {1, 2, 3}  # tuple | list
 
