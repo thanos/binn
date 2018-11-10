@@ -6,7 +6,7 @@
 Binn is a computer data serialization format used mainly for application data transfer. It stores primitive data types and data structures in a binary form. For the full spec see http://github.com/liteserver/binn
 
 Elixir Types | Binn 
--------------+------
+-------------:|------
 1          # integer | integer
 1.0        # float  | floating point numbers (IEEE single and double precision)
 true       # boolean | boolean (true and false)
