@@ -19,7 +19,8 @@ true       # boolean | boolean (true and false)
 %{:a => 1, 2 => :b} # map | object, where all keys are cast to string
 
 
-The Binn format is designed to be compact and fast on readings. The elements are stored with their sizes to increase the read performance. The strings are null terminated so when read the library returns a pointer to them inside the buffer, avoiding memory allocation and data copying, an operation known as zero-copy.
+
+The `Binn` format is designed to be compact and fast on readings. The elements are stored with their sizes to increase the read performance. The strings are null terminated so when read the library returns a pointer to them inside the buffer, avoiding memory allocation and data copying, an operation known as zero-copy.
 
 ## Installation
 
