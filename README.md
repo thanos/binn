@@ -14,6 +14,10 @@ true       # boolean | boolean (true and false)
 "elixir"   # string | string
 [1, 2, 3]  # list | list
 {1, 2, 3}  # tuple | list
+%{:a => 1, :b => 2} # map | object,  where all keys are cast to string 
+%{1 => :a, 2 => :b} # map | map, if the Elixir map's keys are all integer
+%{:a => 1, 2 => :b} # map | object, where all keys are cast to string
+
 
 The Binn format is designed to be compact and fast on readings. The elements are stored with their sizes to increase the read performance. The strings are null terminated so when read the library returns a pointer to them inside the buffer, avoiding memory allocation and data copying, an operation known as zero-copy.
 
