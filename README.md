@@ -5,6 +5,16 @@
 
 Binn is a computer data serialization format used mainly for application data transfer. It stores primitive data types and data structures in a binary form. For the full spec see http://github.com/liteserver/binn
 
+Elixir Types | Binn 
+-------------+------
+1          # integer | integer
+1.0        # float  | floating point numbers (IEEE single and double precision)
+true       # boolean | boolean (true and false)
+:atom      # atom / symbol | floating point numbers (IEEE single and double precision)
+"elixir"   # string | floating point numbers (IEEE single and double precision)
+[1, 2, 3]  # list | list
+{1, 2, 3}  # tuple | list
+
 The Binn format is designed to be compact and fast on readings. The elements are stored with their sizes to increase the read performance. The strings are null terminated so when read the library returns a pointer to them inside the buffer, avoiding memory allocation and data copying, an operation known as zero-copy.
 
 ## Installation
