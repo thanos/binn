@@ -44,6 +44,19 @@ defmodule Binn do
 @TRUE "\x01"
 @FALSE "\x02"
 
+@UINT8 "\x20"
+@INT8 "\x21"
+@UINT16 "\x40"
+@INT16 "\x41"
+@UINT32 "\x60'
+@INT32 "\x61'
+@UINT64 "\x80'
+@INT64 "\x81'
+@FLOAT64 "\x82'
+
+# Extended data formats
+PYBINN_MAP = b'\xb8'
+PYBINN_MAP_SIZE = 8
 
 
   @doc """
