@@ -32,7 +32,11 @@ defmodule Binn do
 # Data Formats
 @LIST "\xe0"
 @MAP  "\xe1"
-@OBJECT  '\xe2'
+@OBJECT  "\xe2"
+
+@STRING  "\xa0"
+@TIME  "\xa1"  # Not used
+@DATETIME "\xa2"
 
 
 
