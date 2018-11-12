@@ -27,16 +27,16 @@ defmodule Binn do
   alias __MODULE__.Encoder
   alias __MODULE__.Decoder
   
-@DATETIME_FORMAT "%Y-%m-%d %H:%M:%S"
+@datetime_format "%Y-%m-%d %H:%M:%S"
 
 # Data Formats
-@LIST "\xe0"
-@MAP  "\xe1"
-@OBJECT  "\xe2"
+@list 0xE0
+@map  0xe1
+@object  0xe2 
 
-@STRING  "\xa0"
-@TIME  "\xa1"  # Not used
-@DATETIME "\xa2"
+@string  0xa0
+@time  0xa1  # Not used
+@datetime "\xa2"
 
 @BLOB "\xc0"
 
