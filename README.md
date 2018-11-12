@@ -1,7 +1,6 @@
 # Binn
 
 [![Build Status](https://travis-ci.org/thanos/binn.svg?branch=master)](https://travis-ci.org/thanos/binn)
-
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1d0f255bb75946ebb800b52ec48bd4db)](https://app.codacy.com/app/thanos/binn?utm_source=github.com&utm_medium=referral&utm_content=thanos/binn&utm_campaign=Badge_Grade_Dashboard)
 
 
