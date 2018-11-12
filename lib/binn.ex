@@ -38,21 +38,21 @@ defmodule Binn do
 @time  0xa1  # Not used
 @datetime 0xa2
 
-@blob 0xc0
+@blob  0xc0
 
-@null 0x00
-@true 0x01
+@null  0x00
+@true  0x01
 @false 0x02
 
-@UINT8 "\x20"
-@INT8 "\x21"
-@UINT16 "\x40"
-@INT16 "\x41"
-@UINT32 "\x60"
-@INT32 "\x61"
-@UINT64 "\x80"
-@INT64 "\x81"
-@FLOAT64 "\x82"
+@uint8   0x20
+@int8    0x21
+@uint16  0x40
+@int16   0x41
+@unit32  0x60
+@int32   0x61
+@uint64  0x80
+@int64   0x81
+@float64 0x82
 
 # Extended data formats
 @MAP "\xb8"
