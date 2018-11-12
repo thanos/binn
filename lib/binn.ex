@@ -26,6 +26,16 @@ defmodule Binn do
 
   alias __MODULE__.Encoder
   alias __MODULE__.Decoder
+  
+@DATETIME_FORMAT "%Y-%m-%d %H:%M:%S"
+
+# Data Formats
+@LIST "\xe0"
+@MAP  "\xe1"
+@OBJECT  '\xe2'
+
+
+
 
   @doc """
   Serializes `term`.
