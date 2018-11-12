@@ -38,6 +38,11 @@ defmodule Binn do
 @TIME  "\xa1"  # Not used
 @DATETIME "\xa2"
 
+@BLOB "\xc0"
+
+@NULL "\x00"
+@TRUE "\x01"
+@FALSE "\x02"
 
 
 
