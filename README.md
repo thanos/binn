@@ -1,8 +1,10 @@
 # Binn
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1d0f255bb75946ebb800b52ec48bd4db)](https://app.codacy.com/app/thanos/binn?utm_source=github.com&utm_medium=referral&utm_content=thanos/binn&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/thanos/binn.svg?branch=master)](https://travis-ci.org/thanos/binn)
-[![Coverage Status](https://coveralls.io/repos/github/thanos/binn/badge.svg?branch=master)](https://coveralls.io/github/thanos/binn?branch=master)
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1d0f255bb75946ebb800b52ec48bd4db)](https://app.codacy.com/app/thanos/binn?utm_source=github.com&utm_medium=referral&utm_content=thanos/binn&utm_campaign=Badge_Grade_Dashboard)
+
+
 
 
 Binn is a computer data serialization format used mainly for application data transfer. It stores primitive data types and data structures in a binary form. For the full spec see http://github.com/liteserver/binn
