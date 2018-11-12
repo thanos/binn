@@ -55,8 +55,8 @@ defmodule Binn do
 @float64 0x82
 
 # Extended data formats
-@MAP "\xb8"
-@MAP_SIZE  8
+@map 0xb8
+@map_size  8
 
 
   @doc """
