@@ -36,13 +36,13 @@ defmodule Binn do
 
 @string  0xa0
 @time  0xa1  # Not used
-@datetime "\xa2"
+@datetime 0xa2
 
-@BLOB "\xc0"
+@blob 0xc0
 
-@NULL "\x00"
-@TRUE "\x01"
-@FALSE "\x02"
+@null 0x00
+@true 0x01
+@false 0x02
 
 @UINT8 "\x20"
 @INT8 "\x21"
